@@ -1,0 +1,35 @@
+@mixin tablet{
+  @media(min-width: 481px) and (max-width:992px){
+      @content;
+  }
+}
+@mixin mobile{
+  @media(min-width:320px) and (max-width:480px){
+      @content;
+  }
+}
+@mixin desktop{
+ @media(min-width:992px){
+     @content;
+ }
+}
+
+@mixin d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin text-decoration-color {
+  color: black;
+  text-decoration: none;
+}
+@mixin grid-column($columns,$gap){
+  display: grid;
+  grid-template-columns: repeat($columns,1fr);
+  gap:$gap;
+}
+@mixin grid-row($rows,$gap){
+  display: grid;
+  grid-template-columns: repeat($rows,1fr);
+  gap:$gap;
+}

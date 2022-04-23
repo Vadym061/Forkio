@@ -1,0 +1,17 @@
+@import "./reset";
+@import "./variable";
+@import "./mixins";
+@import "./header/header.scss";
+@import "./Revolutionary-editor/style.scss";
+@import "./talking-section/style.scss";
+@import "./price-section/style.scss";
+
+body {
+  font-family: Montserrat, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+button {
+  cursor: pointer;
+}

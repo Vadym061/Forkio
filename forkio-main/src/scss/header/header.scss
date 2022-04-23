@@ -1,0 +1,751 @@
+.header-content {
+  @include d-flex-center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 34px 0;
+  width: 95%;
+  
+  
+
+  @include tablet {
+      @include d-flex-center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  &__logo {
+      z-index: 2;
+      @include d-flex-center;
+
+      @include tablet {
+          margin-left: 10px;
+      }
+  }
+
+  &__icon {
+      width: 43px;
+      height: 41px;
+      z-index: 2;
+      background: url("../img/header/header-logo-icon.svg");
+      transition: all 0.2s ease 0s;
+  }
+
+  &__icon:hover {
+      background: url("../img/header/logo-hover-icon.svg");
+      transition: all 0.2s ease 0s;
+  }
+
+  &__logo-text {
+      color: $main-active-color;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 16px;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      margin-left: 17px;
+      z-index: 5;
+      @include mobile {
+          display: none;
+      }
+      @include tablet{
+          display: block;
+      }  
+      @include desktop{
+          display: block;
+      }   }
+
+  &__logo-text:hover {
+      color: $main-light-color;
+  }
+
+  &__burger {
+      width: 26px;
+      height: 21px;
+      position: relative;
+      cursor: pointer;
+      z-index: 2;
+
+      @include tablet {
+          display: none;
+      }
+
+      @include desktop {
+          display: none;
+      }
+  }
+
+  &__burger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: $main-light-color;
+      top: 40%;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger::after {
+      content: "";
+      background-color: $main-light-color;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      left: 0;
+      bottom: 0;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active span {
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger::before {
+      content: "";
+      background-color: $main-light-color;
+      position: absolute;
+      width: 15px;
+      height: 5px;
+      right: 0;
+      top: 0;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active::before {
+      width: 100%;
+      top: 9px;
+      transform: rotate(45deg);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active::after {
+      width: 100%;
+      bottom: 8px;
+      transform: rotate(-45deg);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__buy-btn {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: bold;
+      color: $main-light-color;
+      border-radius: 40px;
+      background-color: $main-active-color;
+      border: none;
+      padding: 10px;
+      z-index: 2;
+      min-width: 120px;
+
+      @include tablet {
+          padding: 11px 20px;
+          min-width: 145px;
+      }
+
+      @include desktop {
+          order: 3;
+          padding: 11px 20px;
+          min-width: 145px;
+      }
+      
+  }
+
+  &__buy-btn:hover {
+      background-color: $main-light-color;
+      color: $main-active-color;
+  }
+}
+
+.page-header {
+  position: relative;
+  width: 95%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &__menu {
+      position: absolute;
+      left: 0;
+      top: -220px;
+      width: 95%;
+      transition: all 0.7s ease 0s;
+
+      @include tablet {
+          position: static;
+          z-index: 2;
+      }
+
+      @include desktop {
+          position: static;
+          order: 2;
+          z-index: 2;
+      }
+  }
+
+  &__menu.active {
+      top: 108px;
+      transition: all 0.7s ease 0s;
+  }
+
+  &__list {
+      @include tablet {
+          @include d-flex-center;
+          position: static;
+          z-index: 2;
+          text-align: center;
+      }
+
+      @include desktop {
+          @include d-flex-center;
+          position: static;
+          z-index: 2;
+          text-align: center;
+          margin-left: 240px;
+      }
+  }
+
+  &__item {
+      list-style: none;
+      padding: 29px 20px 21px 35px;
+      background-color: #333333;
+      border-bottom: 2px solid #3B3B3B;
+      position: relative;
+
+      @include tablet {
+          font-size: 16px;
+          line-height: 18px;
+          color:$main-active-color;
+          background-color: inherit;
+          border-bottom: none;
+          font-weight: bold;
+          padding: 20px 30px;
+      }
+
+      @include desktop {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+          background-color: inherit;
+          border-bottom: none;
+          font-weight: bold;
+          padding: 20px 20px;
+      }
+  }
+
+  &__link {
+      color: $main-light-color;
+      text-decoration: none;
+      font-size: 26px;
+      line-height: 26px;
+
+      @include tablet {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+      }
+
+      @include desktop {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+      }
+  }
+
+  &__item:last-child {
+      height: 14px;
+      padding: 0;
+
+      @include tablet{
+          display: none;
+      }
+  }
+
+  &__item:hover a{
+      @include mobile {
+              color: $main-active-color;
+      }
+
+      @include tablet {
+          color: $main-light-color;
+      }
+
+      @include desktop {
+          color: $main-light-color;
+      }
+  }
+
+  &__item:hover span {
+      @include mobile {
+          opacity: 1;
+      }
+
+      @include tablet {
+          opacity: 0;
+      }
+
+      @include desktop {
+          opacity: 0;
+      }
+  }
+
+  &__item-active {
+      position: absolute;
+      width: 8px;
+      height: 53px;
+      background-color: $main-active-color;
+      left: 0;
+      top: 13px;
+      opacity: 0;
+
+  }
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  background-color: #27262A;
+  z-index: 2;
+
+  @include desktop {
+      background-color: inherit;
+  }
+}
+.header-content {
+  @include d-flex-center;
+  justify-content: space-between;
+  position: relative;
+  padding: 34px 0;
+  width: 95%;
+
+  @include tablet {
+      @include d-flex-center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 25px 0;
+  }
+
+  &__logo {
+      z-index: 2;
+      @include d-flex-center;
+
+      @include tablet {
+          margin-left: 10px;
+
+      }
+  }
+
+  &__icon {
+      width: 43px;
+      height: 41px;
+      z-index: 2;
+      background: url("../img/header/header-logo-icon.svg");
+      transition: all 0.2s ease 0s;
+  }
+
+  &__icon:hover {
+      background: url("../img/header/logo-hover-icon.svg");
+      transition: all 0.2s ease 0s;
+  }
+
+  &__logo-text {
+      color: $main-active-color;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 16px;
+      font-family: $font-secondary;
+      text-transform: uppercase;
+      margin-left: 17px;
+      z-index: 5;
+      @include mobile {
+          display: none;
+      }
+      @include tablet{
+          display: block;
+      }  
+      @include desktop{
+          display: block;
+      }   }
+
+  &__logo-text:hover {
+      color: $main-light-color;
+  }
+
+  &__burger {
+      width: 26px;
+      height: 21px;
+      position: relative;
+      cursor: pointer;
+      z-index: 2;
+
+      @include tablet {
+          display: none;
+      }
+
+      @include desktop {
+          display: none;
+      }
+  }
+
+  &__burger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: $main-light-color;
+      top: 40%;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger::after {
+      content: "";
+      background-color: $main-light-color;
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      left: 0;
+      bottom: 0;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active span {
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger::before {
+      content: "";
+      background-color: $main-light-color;
+      position: absolute;
+      width: 15px;
+      height: 5px;
+      right: 0;
+      top: 0;
+      border-radius: 5px;
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active::before {
+      width: 100%;
+      top: 9px;
+      transform: rotate(45deg);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__burger.active::after {
+      width: 100%;
+      bottom: 8px;
+      transform: rotate(-45deg);
+      transition: all 0.3s ease 0s;
+  }
+
+  &__buy-btn {
+      font-size: 15px;
+      line-height: 15px;
+      font-weight: bold;
+      color: $main-light-color;
+      border-radius: 40px;
+      background-color: $main-active-color;
+      border: none;
+      padding: 10px;
+      z-index: 2;
+      min-width: 120px;
+
+      @include tablet {
+          padding: 11px 20px;
+          min-width: 145px;
+      }
+
+      @include desktop {
+          order: 3;
+          padding: 11px 20px;
+          min-width: 145px;
+      }
+  }
+
+  &__buy-btn:hover {
+      background-color: $main-light-color;
+      color: $main-active-color;
+
+  }
+
+
+}
+
+.page-header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  &__menu {
+      position: absolute;
+      left: 0;
+      top: -220px;
+      width: 100%;
+      transition: all 0.7s ease 0s;
+
+      @include tablet {
+          position: static;
+          z-index: 2;
+      }
+
+      @include desktop {
+          position: static;
+          order: 2;
+          z-index: 2;
+      }
+  }
+
+  &__menu.active {
+      top: 108px;
+      transition: all 0.7s ease 0s;
+  }
+
+  &__list {
+      @include tablet {
+          @include d-flex-center;
+          position: static;
+          z-index: 2;
+          text-align: center;
+      }
+
+      @include desktop {
+          @include d-flex-center;
+          position: static;
+          z-index: 2;
+          text-align: center;
+          margin-left: 240px;
+      }
+  }
+
+  &__item {
+      list-style: none;
+      padding: 29px 20px 21px 35px;
+      background-color: #333333;
+      border-bottom: 2px solid #3B3B3B;
+      position: relative;
+
+      @include tablet {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+          background-color: inherit;
+          border-bottom: none;
+          font-weight: bold;
+          padding: 20px 30px;
+      }
+
+      @include desktop {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+          background-color: inherit;
+          border-bottom: none;
+          font-weight: bold;
+          padding: 20px 20px;
+      }
+  }
+
+  &__link {
+      color: $main-light-color;
+      text-decoration: none;
+      font-size: 26px;
+      line-height: 26px;
+
+      @include tablet {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+      }
+
+      @include desktop {
+          font-size: 16px;
+          line-height: 18px;
+          color: $main-active-color;
+      }
+  }
+
+  &__item:last-child {
+      height: 14px;
+      padding: 0;
+
+      @include tablet {
+          display: none;
+      }
+  }
+
+  &__item:hover a{
+      @include mobile {
+              color: $main-active-color;
+      }
+
+      @include tablet {
+          color: $main-light-color;
+      }
+
+      @include desktop {
+          color: $main-light-color;
+      }
+  }
+
+  &__item:hover span {
+      @include mobile {
+          opacity: 1;
+      }
+
+      @include tablet {
+          opacity: 0;
+      }
+
+      @include desktop {
+          opacity: 0;
+      }
+  }
+
+  &__item-active {
+      position: absolute;
+      width: 8px;
+      height: 53px;
+      background-color: $main-active-color;
+      left: 0;
+      top: 13px;
+      opacity: 0;
+
+  }
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #27262A;
+  z-index: 2;
+
+  @include desktop {
+      background-color: inherit;
+  }
+}
+.header-wrapper {
+  background: url("../img/header/main-header-bg.png") no-repeat center/cover;
+}
+.section-fork {
+  padding: 0 11px;
+  @include d-flex-center;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+  &__title {
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 48px;
+      color: $main-light-color;
+      
+
+      @include tablet {
+          font-size: 72px;
+          line-height: 72px;
+      }
+      @include desktop {
+          font-size: 82px;
+          line-height: 82px;
+      }
+  }
+
+  &__text {
+      font-size: 18px;
+      line-height: 24px;
+      color: $main-active-color;
+      margin-top: 19px;
+      margin-bottom: 14px;
+      &--span:before {
+        content: "\0a";
+        white-space: pre;
+        @media (min-width: 482px) {
+          content: " ";
+        }
+      }
+      
+      @include tablet {
+          font-family: $font-secondary;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 19px;
+      }
+      @include desktop {
+          font-family: $font-secondary;
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 19px;
+      }
+     
+  }
+
+  &__sub-text {
+      font-size: 14px;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: $main-text-color;
+      padding-bottom: 30px;
+  }
+
+}
+
+.download {
+  @include d-flex-center;
+  flex-direction: column;
+  margin-top: 394px;
+  position: relative;
+
+  &__download-button {
+      position: absolute;
+      top: -23px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      background: $main-active-color;
+      color: $main-light-color;
+      border: none;
+      border-radius: 40px;
+      padding: 13px 29px;
+
+      @include tablet {
+          min-width: 390px;
+          font-size: 21px;
+          line-height: 23px;
+      }
+      @include desktop {
+          min-width: 390px;
+          font-size: 21px;
+          line-height: 23px;
+      }
+  }
+
+  &__download-button:hover {
+      background-color: $main-light-color;
+      color: $main-active-color;
+      border: 1px solid #8D81AC;
+  }
+
+  &__text {
+      font-size: 14px;
+      line-height: 14px;
+      color: $main-text-color;
+      margin-top: 26px;
+      position: absolute;
+      top: 20px;
+  }
+}
