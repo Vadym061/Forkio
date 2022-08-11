@@ -1,0 +1,168 @@
+.pricing {
+   margin-top: -2px;
+   background: url("../img/pricing-bg.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   &__title {
+      padding-top: 80px;
+      font-family: $font-montserrat;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 50px;
+      text-align: center;
+      color: #ffffff;
+      @media screen and (max-width: 769px) {
+         padding-top: 59px;
+         font-size: 42px;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         font-size: 28px;
+      }
+   }
+   &__menu {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      margin: 0;
+      padding: 112px 0 70px;
+      @media screen and (max-width: 769px) {
+         padding: 30px 0 94px;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         padding: 32px 0 12px;
+      }
+      &-item {
+         width: 257px;
+         height: 470px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         background-color: rgba($color: #fff, $alpha: 0.1);
+         mix-blend-mode: normal;
+         @media screen and (max-width: 769px) {
+            margin-bottom: 68px;
+         }
+         @media screen and (min-width: 320px) and (max-width: 576px) {
+            margin-bottom: 10px;
+         }
+         .pricing__container {
+            width: 100%;
+            min-height: 98px;
+         }
+         &-title {
+            padding: 36px 0;
+            width: 100%;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ffffff;
+            background-color: rgba($color: #fff, $alpha: 0.06);
+         }
+         &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .pricing__menu-item-price {
+               padding-top: 30px;
+               font-family: $font-montserrat;
+               font-weight: 700;
+               font-size: 60px;
+               color: #ffffff;
+               text-transform: uppercase;
+            }
+            .pricing__menu-item-price span {
+               font-weight: 400;
+            }
+            .pricing__menu-item-month {
+               position: relative;
+               padding: 20px 0 38px;
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 16px;
+               text-transform: uppercase;
+               color: #ffffff;
+            }
+            .pricing__menu-item-month::after {
+               position: absolute;
+               content: "";
+               width: 60px;
+               height: 5px;
+               bottom: 0;
+               left: 15px;
+               background-color: #8d81ac;
+            }
+            .pricing__menu-item-descr {
+               margin-top: 36px;
+               padding: 0 20px;
+               min-height: 35px;
+               justify-self: start;
+               padding: 0 20px 0;
+               font-weight: 400;
+               font-size: 16px;
+               line-height: 18px;
+               text-align: center;
+               color: #ffffff;
+            }
+            .pricing__menu-item-btn {
+               margin: 36px 48px;
+               padding: 13px 36px;
+               border-radius: 55px;
+               font-weight: 400;
+               font-size: 15px;
+               line-height: 15px;
+               text-transform: uppercase;
+               color: #ffffff;
+               background-color: rgba($color: #fff, $alpha: 0.15);
+            }
+         }
+         &--active {
+            width: 299px;
+            height: 560px;
+            // justify-self: center;
+            background-color: rgba($color: #463048, $alpha: 0.84);
+            mix-blend-mode: normal;
+            margin-top: -44px;
+            @media screen and (max-width: 769px) {
+               margin-left: -42px;
+            }
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+               margin-left: 0;
+               margin-top: 0;
+            }
+            .pricing__menu-item-title--active {
+               padding: 43px 0;
+               width: 100%;
+               background-color: rgba($color: #000, $alpha: 0.1);
+            }
+            .pricing__menu-item-price--active {
+               padding-top: 22px;
+            }
+            .pricing__menu-item-month--active {
+               padding: 22px 0 46px;
+            }
+            .pricing__menu-item-descr--active {
+               margin-top: 48px;
+            }
+            .pricing__menu-item-btn--active {
+               margin: 86px 48px 0;
+               padding: 20px 48px;
+            }
+         }
+      }
+      &-item:not(:last-child) {
+         margin-right: 15px;
+         @media screen and (min-width: 320px) and (max-width: 576px) {
+            margin-right: 0;
+         }
+      }
+      &-item:nth-child(2) {
+         @media screen and (max-width: 769px) {
+            margin-right: 0;
+         }
+      }
+   }
+}

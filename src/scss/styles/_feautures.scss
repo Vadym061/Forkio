@@ -1,0 +1,139 @@
+.feautures {
+   padding: 100px 0 32px 0;
+   background-color: #f4f4f4;
+   @media screen and (max-width: 769px) {
+      padding: 62px 0 10px 0;
+      background-color: #fff;
+   }
+
+   &__wrapper {
+      position: relative;
+      display: grid;
+      column-gap: 46px;
+      grid-template-columns: 540px 574px;
+      @media screen and (max-width: 769px) {
+         display: flex;
+         flex-direction: column;
+      }
+      .feautures__menu {
+         display: flex;
+         flex-direction: column;
+         max-width: 526px;
+         @media screen and (max-width: 769px) {
+            order: 2;
+            max-width: 100%;
+            padding-left: 20px;
+         }
+         @media screen and (min-width: 320px) and (max-width: 576px) {
+            padding-left: 0;
+         }
+         &-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 34px;
+            @media screen and (max-width: 769px) {
+               margin-bottom: 60px;
+               max-width: 100%;
+               justify-content: flex-start;
+            }
+            @media screen and (min-width: 320px) and (max-width: 576px) {
+               flex-direction: column;
+               align-items: center;
+               margin-bottom: 36px;
+            }
+            .img--wrapper {
+               display: flex;
+               justify-content: center;
+               min-width: 92px;
+               img {
+                  width: auto;
+                  height: auto;
+               }
+               @media screen and (max-width: 769px) {
+                  padding-right: 20px;
+               }
+               @media screen and (min-width: 320px) and (max-width: 576px) {
+                  margin-top: 20px;
+                  padding-right: 0;
+               }
+            }
+            &-wrapper {
+               width: 408px;
+               @media screen and (max-width: 769px) {
+                  width: 100%;
+               }
+               @media screen and (min-width: 320px) and (max-width: 576px) {
+                  text-align: center;
+               }
+
+               .feautures__menu-item-title {
+                  font-family: $font-montserrat;
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 21px;
+                  color: #323232;
+                  @media screen and (min-width: 320px) and (max-width: 576px) {
+                     margin-top: 20px;
+                  }
+               }
+               .feautures__menu-item-descr {
+                  margin: 16px auto 0;
+                  font-family: $font-lato;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 21px;
+                  color: #848e97;
+                  @media screen and (min-width: 320px) and (max-width: 576px) {
+                     margin-top: 14px;
+                  }
+               }
+            }
+         }
+      }
+   }
+   &__title {
+      width: 585px;
+      font-family: $font-montserrat;
+      font-weight: 700;
+      font-size: 48px;
+      color: #8d81ac;
+      @media screen and (max-width: 769px) {
+         margin-bottom: 50px;
+         width: 100%;
+         order: 1;
+         font-size: 42px;
+         text-align: center;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         font-size: 32px;
+         margin-bottom: 36px;
+      }
+   }
+   &__img {
+      position: absolute;
+      // padding-top: 66px;
+      right: -81px;
+      top: 94px;
+      width: 675px;
+      height: 470px;
+      box-shadow: -4px 3px 6px 2px rgba($color: #000000, $alpha: 0.2);
+      @media screen and (max-width: 769px) {
+         position: relative;
+         top: 0;
+         order: 3;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         display: none;
+      }
+      &--mobile {
+         display: none;
+         box-shadow: -4px 3px 6px 2px rgba($color: #000000, $alpha: 0.2);
+         @media screen and (min-width: 320px) and (max-width: 576px) {
+            display: block;
+            margin-bottom: 7px;
+            order: 3;
+         }
+      }
+   }
+}

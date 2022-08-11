@@ -1,0 +1,88 @@
+.revolutionary {
+   &__title {
+      margin-top: 52px;
+      font-family: $font-montserrat;
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 1;
+      color: #635c73;
+      text-transform: uppercase;
+      text-align: center;
+      @media screen and (max-width: 769px) {
+         margin-top: 74px;
+         font-size: 42px;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         margin-top: 66px;
+         font-size: 26px;
+      }
+   }
+   &__description {
+      display: block;
+      max-width: 900px;
+      font-family: $font-lato;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 32px;
+      text-align: center;
+      margin: 30px auto 0;
+      color: #323232;
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         margin-top: 26px;
+         font-size: 14px;
+         line-height: 20px;
+      }
+   }
+   &__menu {
+      margin: 26px auto 60px;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      @media screen and (max-width: 769px) {
+         margin-bottom: 98px;
+      }
+      @media screen and (min-width: 320px) and (max-width: 576px) {
+         margin: 16px 0 80px;
+      }
+      &-item {
+         display: flex;
+         border: 1px solid #dddddd;
+         border-radius: 2px;
+         @media screen and (min-width: 320px) and (max-width: 576px) {
+            margin-top: 20px;
+         }
+         &-wrapper {
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+         }
+         &-link {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px 5px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 20px;
+            color: #333333;
+            cursor: pointer;
+            &-svg {
+               margin-right: 4px;
+               fill: #333333;
+            }
+         }
+         &-span {
+            padding: 5px 8px;
+            border-left: 1px solid #dddddd;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #333333;
+         }
+      }
+      &-item:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+}
